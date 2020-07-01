@@ -1,0 +1,5 @@
+{
+    "name": "MoJ Data Engineering pytest Unit Testing Workflow",
+    "description": "Run unit tests with pytest",
+    "iconName": "pytest"
+}
