@@ -1,10 +1,10 @@
-# Ministry of Justice GitHub Workflows
-This repositiory should be used to store standardised Workflow templates for use in moj-analytical-services projects.
+# Ministry of Justice Analytical Services GitHub Workflows
+This repositiory is used to store standardised Workflow templates and associated configuration files for use in moj-analytical-services projects.
 
 ## Using moj-analytical-services Workflow Templates
-You can select a GitHub Workflow to use in your own project by navitagting to the Actions tab.
-If you're repository already contains Workflow files, select `New Workflow`, otherwise you can ignore this step.
-You'll then see will an option to add "Workflows created by MoJ Analytical Services".
+- You can select a GitHub Workflow to use in your own project by navitagting to the Actions tab.
+- If you're repository already contains Workflow files, select `New Workflow`, otherwise you can ignore this step.
+- You'll then see will an option to add "Workflows created by MoJ Analytical Services".
 
 ## Adding Templates and Configs
 This is a publicly visable repository so be considerate of adding sensitive or confidential material.
