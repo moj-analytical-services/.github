@@ -18,8 +18,8 @@ This is a publicly visable repository so be considerate of adding sensitive or c
 ## URL Format
 The GitHub Pages URL for this repo is:
 
-`https://moj-analytical-services.github.io/.github/`.
+`https://moj-analytical-services.github.io/.github/`
 
 You can navigate using teh following URL format:
 
-`https://moj-analytical-services.github.io/metadata_schema/[schema_name]/[team_name]/[file_name]`.
+`https://moj-analytical-services.github.io/.github/[workflow-templates]/[team_name]/[file_name]`
