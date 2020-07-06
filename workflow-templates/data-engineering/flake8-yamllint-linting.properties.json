@@ -1,5 +1,5 @@
 {
     "name": "MoJ Data Engineering Linting Workflow",
     "description": "Lint Python files with Flake8 and YAML files with YAMLlint.",
-    "iconName": "lint"
+    "iconName": "flake8-yamllint-linting"
 }
