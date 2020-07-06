@@ -3,17 +3,17 @@ This repositiory is used to store standardised Workflow templates and associated
 
 ## Using moj-analytical-services Workflow Templates
 - You can select a GitHub Workflow to use in your own project by navitagting to the Actions tab.
-- If you're repository already contains Workflow files, select `New Workflow`, otherwise you can ignore this step.
-- You'll then see will an option to add "Workflows created by MoJ Analytical Services".
+- If you're repo already contains Workflow files, select `New Workflow`, otherwise ignore this step.
+- You'll then see an option to add "Workflows created by MoJ Analytical Services".
 
 ## Adding Templates and Configs
-This is a publicly visable repository so be considerate of adding sensitive or confidential material.
+This is a publicly visable repo so be do not add any sensitive or confidential material.
 - If you want to add a Workflow template for your team,
     - create a folder in the `workflow-templates` directory using your team name,
     - add the Workflow template and the required metadata,
       - instructions on what is needed for the metadata can be found [here](https://docs.github.com/en/actions/configuring-and-managing-workflows/sharing-workflow-templates-within-your-organization#creating-a-workflow-template).
 
-- Package configurations can be added to the repository and the associated GitHub Pages URL used to reference the configuration in a Worklow template.
+- Package configurations can be added to the repo and the associated GitHub Pages URL used to reference the configuration in a Worklow template.
 
 ## URL Format
 The GitHub Pages URL for this repo is:
