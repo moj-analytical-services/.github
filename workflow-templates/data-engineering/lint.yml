@@ -25,8 +25,7 @@ jobs:
 
     - name: Check for flake8 config
       run: |
-        FLAKE8=.flake8
-        if [ -e ./"$FLAKE8" ]; then
+        if [ -e ./.flake8 ]; then
             echo "A .flake8 config file has been found in the root of this branch and will be used in this workflow."
         else
             echo "No .flake8 config file has been found in the root of this branch and so the standard Data Engineering config will used."
@@ -35,8 +34,7 @@ jobs:
    
    - name: Check for yamllint config
       run: |
-        YAMLLINT=.yamllint
-        if [ -e ./"$YAMLLINT" ]; then
+        if [ -e ./.yamllint ]; then
             echo "A .yamllint config file has been found in the root of this branch and will be used in this workflow."
         else
             echo "No .yamllint config file has been found in the root of this branch and so the standard Data Engineering config will used."
