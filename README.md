@@ -18,8 +18,8 @@ This is a publicly visable repo so be sure not add any sensitive or confidential
 ## URL Format
 The GitHub Pages URL for this repo is:
 
-`https://moj-analytical-services.github.io/.github/`.
+`https://moj-analytical-services.github.io/.github/`
 
 You can navigate to a config file using the following URL format:
 
-`https://moj-analytical-services.github.io/configs/<team-name>/<file-name>`.
+`https://moj-analytical-services.github.io/.github/configs/<team-name>/<file-name>`
