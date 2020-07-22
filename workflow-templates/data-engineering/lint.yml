@@ -1,16 +1,19 @@
 name: Lint
-on: [pull_request]
+on:
+  - pull_request
 
 jobs:
-  build:
+  preview:
+    name: Test
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.6, 3.7, 3.8]
-
+        python-version: [3.7, 3.8]
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
