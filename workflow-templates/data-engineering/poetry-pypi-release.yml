@@ -1,4 +1,3 @@
-Something like this:
 name: Release Package on PyPi
 on:
   push:
