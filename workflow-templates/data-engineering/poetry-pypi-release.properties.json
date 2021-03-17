@@ -1,0 +1,5 @@
+{
+    "name": "MoJ Data Engineering Poetry Release to Pypi Workflow",
+    "description": "Use Poetry to build and push a release to Pypi when you create a tag/release (matching a SEMVER syntax) on your repo",
+    "iconName": "python"
+}
