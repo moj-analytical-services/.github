@@ -1,0 +1,8 @@
+{
+    "name": "MoJ Data Engineering Build and Push to ECR Workflow",
+    "description": "Build and tag a Docker image and push it to Amazon ECR",
+    "iconName": "aws",
+    "filePattern": [
+        "^Dockerfile"
+    ]
+}

@@ -1,0 +1,17 @@
+name: Build, tag, and push image to Amazon ECR
+on:
+  pull_request:
+  push:
+    tags:
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  build-tag-push:
+    name: Build, tag, and push image to Amazon ECR
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Build, tag, and push image to Amazon ECR
+        uses: moj-analytical-services/actions/build-and-push-to-ecr@main
+        with:
+          role-to-assume: ${{ secrets.AWS_ECR_ROLE_TO_ASSUME }} # TODO role ARN for OIDC stored as an organisation secret
