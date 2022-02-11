@@ -1,0 +1,4 @@
+{
+    "name": "MoJ Data Engineering YAML Linting Workflow",
+    "description": "Lint YAML files with Yamllint."
+}

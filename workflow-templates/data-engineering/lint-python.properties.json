@@ -1,0 +1,5 @@
+{
+    "name": "MoJ Data Engineering Python Linting Workflow",
+    "description": "Lint Python files with Flake8.",
+    "iconName": "python"
+}
