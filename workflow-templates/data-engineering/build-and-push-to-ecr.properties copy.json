@@ -1,0 +1,8 @@
+{
+    "name": "MoJ Data Engineering Add Cross-Account ECR Permissions Workflow",
+    "description": "Adds required cross-account permissions to ECR repositories",
+    "iconName": "aws",
+    "filePattern": [
+        "^Dockerfile"
+    ]
+}

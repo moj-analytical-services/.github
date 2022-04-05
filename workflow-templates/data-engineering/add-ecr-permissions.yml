@@ -1,0 +1,18 @@
+name: Add cross-account permissions to an image on ECR
+on:
+  pull_request:
+  push:
+    tags:
+      - "**"
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  add-ecr-json:
+    name: Add cross-account permissions to an image on ECR
+    runs-on: ubuntu-20.04
+    steps:
+      - name:  Add cross-account permissions to an image on ECR
+        uses: moj-analytical-services/add-ecr-permissions@main
+        with:
+          role-to-assume: ${{ secrets.AWS_ECR_ROLE_TO_ASSUME }}
