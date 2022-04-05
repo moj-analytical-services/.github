@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name:  Add cross-account permissions to an image on ECR
-        uses: moj-analytical-services/add-ecr-permissions@main
+        uses: moj-analytical-services/actions-cross-account-ecr@main
         with:
           role-to-assume: ${{ secrets.AWS_ECR_ROLE_TO_ASSUME }}
+          account-id: ${{ secrets.AWS_ECR_ACCOUNT_ID }}
