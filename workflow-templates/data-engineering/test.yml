@@ -10,7 +10,8 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.7, 3.8]
+        python-version: ["3.8", "3.9", "3.10"]
+        poetry-install: [from-lock-file, fresh-install]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,11 +25,17 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pytest
           if [ -f pyproject.toml ]
           then
+            if [ "${{ matrix.poetry-install }}" == "from-lock-file" ]; then
+              echo "Installing dependencies from lock file"
+            else
+              echo "Removing lock file and installing latest possible dependencies"
+              rm poetry.lock
+            fi
             pip install poetry
-            poetry install
+            poetry config virtualenvs.create false \
+              && poetry install --no-interaction --no-ansi
           elif [ -f requirements.txt ]
           then
             pip install -r requirements.txt
