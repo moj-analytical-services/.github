@@ -1,5 +1,7 @@
 [sqlfluff]
+dialect = athena
 exclude_rules = L031
+rules = core
 
 [sqlfluff:rules]
 tab_space_size = 2
