@@ -1,6 +1,6 @@
 [sqlfluff]
 dialect = athena
-exclude_rules = L025, L031
+exclude_rules = L025, L026, L031
 rules = core
 
 [sqlfluff:rules]
