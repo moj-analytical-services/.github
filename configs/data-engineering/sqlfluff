@@ -1,21 +1,16 @@
 [sqlfluff]
 dialect = athena
-exclude_rules = L031
+exclude_rules = L025, L026, L031
 rules = core
 
 [sqlfluff:rules]
 tab_space_size = 2
 max_line_length = 88
 indent_unit = space
-comma_style = trailing
 allow_scalar = True
 single_table_references = consistent
 unquoted_identifiers_policy = all
+capitalisation_policy = consistent
 
-[sqlfluff:rules:L010]
-# Keywords
-capitalisation_policy = lower
-
-[sqlfluff:rules:L014]
-# Unquoted identifiers
-extended_capitalisation_policy = consistent
+[sqlfluff:layout:type:comma]
+line_position=trailing
