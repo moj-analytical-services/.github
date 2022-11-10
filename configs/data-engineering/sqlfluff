@@ -6,3 +6,10 @@ rules = core
 [sqlfluff:rules]
 tab_space_size = 2
 max_line_length = 88
+indent_unit = space
+single_table_references = consistent
+unquoted_identifiers_policy = all
+capitalisation_policy = consistent
+
+[sqlfluff:layout:type:comma]
+line_position=trailing
