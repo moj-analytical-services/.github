@@ -1,21 +1,39 @@
-name: Release Package on PyPi
+name: Publish
 on:
   push:
     tags:
       - 'v*.*.*'
 jobs:
-  poetry-publish:
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-    - name: Install Poetry
-      run: |
-        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
-        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
-    - name: Publish to Pypi
-      env:
-        TOKEN: ${{ secrets.PYPI_API_TOKEN }}
-      run: poetry publish --build -u __token__ -p $TOKEN
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+
+      - run: |
+          pip install poetry
+          poetry build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          path: ./dist
+
+  pypi-publish:
+    needs: ['build']
+    environment: 'release'
+
+    name: upload release to PyPI
+    runs-on: ubuntu-latest
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v3
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages_dir: artifact/
